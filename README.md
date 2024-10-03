@@ -67,6 +67,7 @@ Response:
 Access the Short URL:
 
 Navigate to http://localhost:8001/shortID in your browser.
+
 View URL History:
 
 Navigate to http://localhost:8001/url/history in your browser.
