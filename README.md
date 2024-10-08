@@ -1,73 +1,68 @@
-# ShrinkerServer
-# URL Shortener
+# Shrinker - URL Shortener
 
-This project is a simple URL shortener service built with Node.js, Express, and MongoDB. It allows users to generate short URLs for any given long URL and track the number of clicks on each short URL.
+Shrinker is a simple web application that allows users to shorten URLs after logging in or signing up. Each user can create and manage their own list of shortened URLs. The app uses local storage to manage user sessions and store shortened URLs.
 
 ## Features
+- User authentication (Sign up and Login)
+- URL shortening
+- URL history management for each user
+- Logout functionality
 
-- Generate short URLs for any given long URL.
-- Track the number of clicks on each short URL.
-- Display the history of all generated URLs with their click counts.
-- Simple and nice-looking homepage for URL input and short URL generation.
+## Prerequisites
+- Node.js (version 14.x or later)
+- npm (version 6.x or later)
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v12 or higher)
-- MongoDB (running locally or accessible remotely)
-
-### Installation
+## Installation
 
 1. Clone the repository:
-
-   ```sh
-   git clone https://github.com/yourusername/url-shortener.git
-   cd url-shortener
+   ```bash
+   git clone https://github.com/your-username/shrinker.git
+   cd shrinker
    ```
 
-2. Install the required packages:
-   ```
+2. Install dependencies:
+   ```bash
    npm install
    ```
-3. Ensure MongoDB is running on your machine or accessible remotely.
 
-4. Start the server:
+## Running the Application
 
-```
-nodemon index.js
-```
+1. Start the development server:
+   ```bash
+   npm start
+   node server.js
+   ```
+   Ensure that you are starting the server in a different terminal window.
+2. Open the application in your browser at:
+   ```
+   http://localhost:3000
+   ```
 
-### Usage
-Open Terminal / POSTMAN and send a POST or GET request according to the routes
-The generated short URL will be returned as a JSON response
-You can access the history of all generated URLs by navigating to http://localhost:8001/url/history.
-### Routes
-POST /url: Generates a short URL for the given long URL.
-GET /url/history: Displays the history of all generated URLs with their click counts.
-GET /:shortID: Redirects to the original URL for the given short URL ID.
-### Project Structure
-index.js: The main entry point of the application.
-controllers/url.js: Contains the logic for handling URL generation and history display.
-models/url.js: Defines the URL schema for MongoDB.
-routes/url.js: Defines the routes for URL-related operations.
-connect.js: Contains the logic for connecting to MongoDB.
+## Usage
 
-Example
-Generate a Short URL:
-```
-curl -X POST http://localhost:8001/url -H "Content-Type: application/json" -d '{"url": "https://www.example.com"}'
-```
-Response: 
-```
-{
-  "id": "shortID"
-}
-```
-Access the Short URL:
+1. **Sign Up:**
+   - Enter a unique username and password to create an account.
+   - Your URL history will be tied to this account.
 
-Navigate to http://localhost:8001/shortID in your browser.
+2. **Login:**
+   - Use your credentials to log in and access your saved URLs.
+   - Upon successful login, the application will display the URL shortener interface.
 
-View URL History:
+3. **URL Shortening:**
+   - Input a valid URL to shorten it.
+   - The shortened URL will be displayed and stored in your account's history.
 
-Navigate to http://localhost:8001/url/history in your browser.
+4. **Logout:**
+   - Click on the 'Logout' button to end your session and return to the login page.
+
+## Project Structure
+
+- `App.js`: Main component that handles routing between the login page and the URL shortener.
+- `Login.js`: Handles user authentication (sign up and login).
+- `UrlShortener.js`: Contains the core functionality for shortening URLs and managing user-specific URL history.
+- `setupProxy.js`: A secondary way to resolve the tedious CORS issue 
+
+## Technologies Used
+- **React**: Frontend framework
+- **Local Storage**: Used to store user information and authentication status
+- **JavaScript**: Core language used for logic and interactivity
