@@ -2,6 +2,9 @@
 
 Shrinker is a simple web application that allows users to shorten URLs after logging in or signing up. Each user can create and manage their own list of shortened URLs. The app uses local storage to manage user sessions and store shortened URLs.
 
+https://drive.google.com/file/d/1eJC_vu4I-em_Xls1rOrYiFv4ht1uUBbn/view?usp=sharing
+Video of the Working Project
+
 ## Features
 - User authentication (Sign up and Login)
 - URL shortening
