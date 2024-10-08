@@ -1,0 +1,178 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input,
+button {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 5px 0;
+  width: 100%;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #4caf50;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #ffffff;
+}
+
+h2,
+h3 {
+  margin-bottom: 15px;
+}
+
+.result-section {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #2b2b2b;
+  border-radius: 8px;
+}
+
+.history-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history-item {
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #2b2b2b;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.url-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.long-url {
+  color: #888;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 14px;
+  color: #888;
+}
+
+a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+span {
+  color: #4caf50;
+  cursor: pointer;
+}
+
+span:hover {
+  text-decoration: underline;
+}
+/* Add these to your existing CSS */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #4caf50;
+}
+
+.history-section p {
+  text-align: center;
+  padding: 20px;
+  background-color: #2b2b2b;
+  border-radius: 8px;
+}
+
+/* Update button styles to handle disabled state */
+button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+.login-container {
+  max-width: 450px;
+  margin: 100px auto;
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+  display: grid;
+  justify-content: center;
+}
+.login-container h2 {
+  text-align: center;
+}
+.url-shortener-container {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.loginbar {
+  align-content: center;
+}
+.username-input {
+  width: 400px;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+}
+.password-input {
+  width: 400px;
+  padding-right: 0;
+  padding-left: 0;
+
+  text-align: center;
+}
+.logbtn {
+  width: 400px;
+}
