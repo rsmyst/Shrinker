@@ -1,5 +1,55 @@
 import React, { useState, useEffect } from "react";
 
+/**
+ * UrlShortener component for shortening URLs and managing URL history.
+ *
+ * @component
+ * @param {Object} props - Component properties.
+ * @param {Object} props.currentUser - The current user object.
+ * @returns {JSX.Element} The rendered component.
+ *
+ * @example
+ * <UrlShortener currentUser={currentUser} />
+ *
+ * @description
+ * This component allows users to shorten URLs and keeps track of their URL history.
+ * It uses localStorage to store and retrieve the user's URL history and updates the
+ * usage counts for each shortened URL periodically.
+ *
+ * @function
+ * @name UrlShortener
+ *
+ * @property {string} longUrl - The original long URL to be shortened.
+ * @property {string} shortUrl - The shortened URL.
+ * @property {Array} history - The history of shortened URLs.
+ * @property {boolean} isLoading - Indicates if the URL shortening process is in progress.
+ * @property {boolean} historyLoading - Indicates if the URL history is being loaded.
+ *
+ * @method
+ * @name loadUserHistory
+ * @description Loads the user's URL history from localStorage.
+ *
+ * @method
+ * @name updateUserHistory
+ * @description Updates the user's URL history in localStorage.
+ *
+ * @method
+ * @name getUsageCount
+ * @description Fetches the usage count for a given shortened URL.
+ *
+ * @method
+ * @name updateAllUsageCounts
+ * @description Updates the usage counts for all URLs in the history.
+ *
+ * @method
+ * @name sanitizeUrl
+ * @description Sanitizes and validates a given URL.
+ *
+ * @method
+ * @name handleShorten
+ * @description Handles the URL shortening process.
+ */
+
 const UrlShortener = ({ currentUser }) => {
   const [longUrl, setLongUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
@@ -139,9 +189,10 @@ const UrlShortener = ({ currentUser }) => {
 
   return (
     <div className="url-shortener-container">
-      <div className="url-input-section">
+      <div>
         <input
           type="text"
+          className="url-input-section"
           placeholder="Enter a URL (e.g., example.com)"
           value={longUrl}
           onChange={(e) => setLongUrl(e.target.value)}
