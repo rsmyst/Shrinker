@@ -21,8 +21,8 @@ Video of the Working Project
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/shrinker.git
-   cd shrinker
+   git clone https://github.com/rsmyst/Shrinker.git
+   cd Shrinker
    ```
 
 2. Install dependencies:
