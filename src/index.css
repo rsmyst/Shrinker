@@ -115,7 +115,7 @@ span {
 span:hover {
   text-decoration: underline;
 }
-/* Add these to your existing CSS */
+
 .loading {
   display: flex;
   justify-content: center;
