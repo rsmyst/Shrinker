@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     "/shorten",
     createProxyMiddleware({
-      target: "http://localhost:5000", // No trailing slash
+      target: "http://localhost:5000", 
       changeOrigin: true,
     })
   );
